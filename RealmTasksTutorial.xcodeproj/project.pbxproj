@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DE3DE7A01FCA1ABA00D0CA47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE79F1FCA1ABA00D0CA47 /* AppDelegate.swift */; };
 		DE3DE7A21FCA1ABA00D0CA47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE7A11FCA1ABA00D0CA47 /* ViewController.swift */; };
-		DE3DE7A51FCA1ABA00D0CA47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3DE7A31FCA1ABA00D0CA47 /* Main.storyboard */; };
 		DE3DE7A71FCA1ABA00D0CA47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3DE7A61FCA1ABA00D0CA47 /* Assets.xcassets */; };
 		DE3DE7AA1FCA1ABA00D0CA47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3DE7A81FCA1ABA00D0CA47 /* LaunchScreen.storyboard */; };
 		DE3DE7B51FCA1ABA00D0CA47 /* RealmTasksTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE7B41FCA1ABA00D0CA47 /* RealmTasksTutorialTests.swift */; };
@@ -37,7 +36,6 @@
 		DE3DE79C1FCA1ABA00D0CA47 /* RealmTasksTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmTasksTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3DE79F1FCA1ABA00D0CA47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3DE7A11FCA1ABA00D0CA47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE3DE7A41FCA1ABA00D0CA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE3DE7A61FCA1ABA00D0CA47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE3DE7A91FCA1ABA00D0CA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE3DE7AB1FCA1ABA00D0CA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +46,7 @@
 		DE3DE7BF1FCA1ABA00D0CA47 /* RealmTasksTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTasksTutorialUITests.swift; sourceTree = "<group>"; };
 		DE3DE7C11FCA1ABA00D0CA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB9C2FD1FCA1CF200BFFB09 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../FOHomework/RealmSwiftExamples/README.md; sourceTree = "<group>"; };
+		DEB9C2FE1FCA1D8000BFFB09 /* RealmTasksTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTasksTutorial.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +98,9 @@
 		DE3DE79E1FCA1ABA00D0CA47 /* RealmTasksTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				DEB9C2FE1FCA1D8000BFFB09 /* RealmTasksTutorial.entitlements */,
 				DE3DE79F1FCA1ABA00D0CA47 /* AppDelegate.swift */,
 				DE3DE7A11FCA1ABA00D0CA47 /* ViewController.swift */,
-				DE3DE7A31FCA1ABA00D0CA47 /* Main.storyboard */,
 				DE3DE7A61FCA1ABA00D0CA47 /* Assets.xcassets */,
 				DE3DE7A81FCA1ABA00D0CA47 /* LaunchScreen.storyboard */,
 				DE3DE7AB1FCA1ABA00D0CA47 /* Info.plist */,
@@ -196,6 +195,11 @@
 					DE3DE79B1FCA1ABA00D0CA47 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					DE3DE7AF1FCA1ABA00D0CA47 = {
 						CreatedOnToolsVersion = 9.1;
@@ -236,7 +240,6 @@
 			files = (
 				DE3DE7AA1FCA1ABA00D0CA47 /* LaunchScreen.storyboard in Resources */,
 				DE3DE7A71FCA1ABA00D0CA47 /* Assets.xcassets in Resources */,
-				DE3DE7A51FCA1ABA00D0CA47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DE3DE7A31FCA1ABA00D0CA47 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE3DE7A41FCA1ABA00D0CA47 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DE3DE7A81FCA1ABA00D0CA47 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmTasksTutorial/RealmTasksTutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
 				INFOPLIST_FILE = RealmTasksTutorial/Info.plist;
@@ -435,7 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.beepscore.RealmTasksTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -443,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RealmTasksTutorial/RealmTasksTutorial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J2LXK9FK3W;
 				INFOPLIST_FILE = RealmTasksTutorial/Info.plist;
@@ -450,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.beepscore.RealmTasksTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
