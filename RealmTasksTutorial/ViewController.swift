@@ -122,8 +122,11 @@ class ViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "Add", style: .default) { _ in
             guard let text = alertTextField.text , !text.isEmpty else { return }
 
-            self.items.append(Task(value: ["text": text]))
-            self.tableView.reloadData()
+            let items = self.items
+            // write items to the Realm
+            try! items.realm?.write {
+                items.insert(Task(value: ["text": text]), at: items.filter("completed = false").count)
+            }
         })
         
         present(alertController, animated: true, completion: nil)
