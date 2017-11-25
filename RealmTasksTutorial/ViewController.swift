@@ -40,6 +40,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupRealm()
     }
 
     func setupUI() {
@@ -56,6 +57,36 @@ class ViewController: UITableViewController {
 
         let username = "test"  // <--- Update this
         let password = "test"  // <--- Update this
+
+        SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false),
+        server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+            guard let user = user else {
+                fatalError(String(describing: error))
+            }
+
+            DispatchQueue.main.async {
+                // Open Realm
+                let configuration = Realm.Configuration(
+                    syncConfiguration: SyncConfiguration(user: user,
+                        realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
+                    )
+                self.realm = try! Realm(configuration: configuration)
+
+                // Show initial tasks
+                func updateList() {
+                    if self.items.realm == nil, let list = self.realm.objects(TaskList.self).first {
+                        self.items = list.items
+                    }
+                    self.tableView.reloadData()
+                }
+                updateList()
+
+                // Notify us when Realm changes
+                self.notificationToken = self.realm.observe { _,_ in
+                    updateList()
+                }
+            }
+        }
     }
 
     deinit {
