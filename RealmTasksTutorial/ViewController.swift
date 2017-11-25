@@ -33,6 +33,10 @@ class ViewController: UITableViewController {
 
     var items = List<Task>()
 
+    // notificationToken to observe changes from the Realm
+    var notificationToken: NotificationToken?
+    var realm: Realm!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -43,6 +47,19 @@ class ViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
+    }
+
+    func setupRealm() {
+        // Log in existing user with username and password
+
+        // TODO: update credentials to match registered credentials
+
+        let username = "test"  // <--- Update this
+        let password = "test"  // <--- Update this
+    }
+
+    deinit {
+        notificationToken?.invalidate()
     }
 
     // MARK: UITableView
