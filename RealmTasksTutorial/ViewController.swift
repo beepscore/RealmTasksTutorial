@@ -58,11 +58,15 @@ class ViewController: UITableViewController {
         let username = "test"  // <--- Update this
         let password = "test"  // <--- Update this
 
+        // realm object server running on local network e.g. macos
+        let realmServerUrlString = "http://127.0.0.1:9080"
+        let realmServerUrl = URL(string: realmServerUrlString)!
+
         SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false),
-        server: URL(string: "http://127.0.0.1:9080")!) { user, error in
-            guard let user = user else {
-                fatalError(String(describing: error))
-            }
+                       server: realmServerUrl) { user, error in
+                        guard let user = user else {
+                            fatalError(String(describing: error))
+                        }
 
             DispatchQueue.main.async {
                 // Open Realm
