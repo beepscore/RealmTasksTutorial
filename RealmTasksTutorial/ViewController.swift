@@ -33,6 +33,10 @@ class ViewController: UITableViewController {
 
     var items = List<Task>()
 
+    // TODO: consider store in keychain
+    var username = ""
+    var password = ""
+
     // notificationToken to observe changes from the Realm
     var notificationToken: NotificationToken?
     var realm: Realm!
@@ -40,7 +44,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupRealm()
+        getUsernameAndPasswordAndSetupRealm()
     }
 
     func setupUI() {
@@ -50,13 +54,35 @@ class ViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
     }
 
+    func getUsernameAndPasswordAndSetupRealm() {
+        let alertController = UIAlertController(title: "Login", message: "", preferredStyle: .alert)
+
+        var usernameTextField: UITextField!
+        var passwordTextField: UITextField!
+
+        alertController.addTextField { textField in
+            usernameTextField = textField
+            textField.placeholder = "User Name"
+        }
+
+        alertController.addTextField { textField in
+            passwordTextField = textField
+            textField.placeholder = "Password"
+        }
+
+        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler:{ _ in
+            // nil coalescing operator
+            self.username = usernameTextField.text ?? ""
+            self.password = passwordTextField.text ?? ""
+
+            self.setupRealm()
+        }))
+
+        present(alertController, animated: true, completion: nil)
+    }
+
     func setupRealm() {
         // Log in existing user with username and password
-
-        // TODO: update credentials to match registered credentials
-
-        let username = "test"  // <--- Update this
-        let password = "test"  // <--- Update this
 
         // realm object server running on local network e.g. macos
         let realmServerUrlString = "http://127.0.0.1:9080"
