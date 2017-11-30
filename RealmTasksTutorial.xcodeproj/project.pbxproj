@@ -67,7 +67,7 @@
 		DE6417D51FCA24670008ABAC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		DE6417DB1FCA24CB0008ABAC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		DE6417DF1FCA24D50008ABAC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		DEB9C2FD1FCA1CF200BFFB09 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../FOHomework/RealmSwiftExamples/README.md; sourceTree = "<group>"; };
+		DEA04D0A1FD0ADC10038A716 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DEB9C2FE1FCA1D8000BFFB09 /* RealmTasksTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealmTasksTutorial.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,9 +101,9 @@
 		DE3DE7931FCA1ABA00D0CA47 = {
 			isa = PBXGroup;
 			children = (
+				DEA04D0A1FD0ADC10038A716 /* README.md */,
 				DE6417DF1FCA24D50008ABAC /* RealmSwift.framework */,
 				DE6417DB1FCA24CB0008ABAC /* Realm.framework */,
-				DEB9C2FD1FCA1CF200BFFB09 /* README.md */,
 				DE3DE79E1FCA1ABA00D0CA47 /* RealmTasksTutorial */,
 				DE3DE7B31FCA1ABA00D0CA47 /* RealmTasksTutorialTests */,
 				DE3DE7BE1FCA1ABA00D0CA47 /* RealmTasksTutorialUITests */,
