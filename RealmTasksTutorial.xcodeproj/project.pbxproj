@@ -14,12 +14,10 @@
 		DE3DE7B51FCA1ABA00D0CA47 /* RealmTasksTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE7B41FCA1ABA00D0CA47 /* RealmTasksTutorialTests.swift */; };
 		DE3DE7C01FCA1ABA00D0CA47 /* RealmTasksTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE7BF1FCA1ABA00D0CA47 /* RealmTasksTutorialUITests.swift */; };
 		DE48315C1FD0B923005EDFC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4831551FD0B923005EDFC5 /* Constants.swift */; };
-		DE48315D1FD0B923005EDFC5 /* NSAttributedString+Strikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4831561FD0B923005EDFC5 /* NSAttributedString+Strikethrough.swift */; };
 		DE48315E1FD0B923005EDFC5 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE4831571FD0B923005EDFC5 /* Shared.xcassets */; };
 		DE48315F1FD0B923005EDFC5 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4831581FD0B923005EDFC5 /* Models.swift */; };
 		DE4831601FD0B923005EDFC5 /* LocalIPAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4831591FD0B923005EDFC5 /* LocalIPAddress.swift */; };
 		DE4831611FD0B923005EDFC5 /* SharedFunctionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48315A1FD0B923005EDFC5 /* SharedFunctionality.swift */; };
-		DE4831621FD0B923005EDFC5 /* RealmColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE48315B1FD0B923005EDFC5 /* RealmColor.swift */; };
 		DE6417DC1FCA24CB0008ABAC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6417DB1FCA24CB0008ABAC /* Realm.framework */; };
 		DE6417DD1FCA24CB0008ABAC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE6417DB1FCA24CB0008ABAC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE6417E01FCA24D50008ABAC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6417DF1FCA24D50008ABAC /* RealmSwift.framework */; };
@@ -72,12 +70,10 @@
 		DE3DE7BF1FCA1ABA00D0CA47 /* RealmTasksTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTasksTutorialUITests.swift; sourceTree = "<group>"; };
 		DE3DE7C11FCA1ABA00D0CA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE4831551FD0B923005EDFC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DE4831561FD0B923005EDFC5 /* NSAttributedString+Strikethrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Strikethrough.swift"; sourceTree = "<group>"; };
 		DE4831571FD0B923005EDFC5 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		DE4831581FD0B923005EDFC5 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DE4831591FD0B923005EDFC5 /* LocalIPAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalIPAddress.swift; sourceTree = "<group>"; };
 		DE48315A1FD0B923005EDFC5 /* SharedFunctionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFunctionality.swift; sourceTree = "<group>"; };
-		DE48315B1FD0B923005EDFC5 /* RealmColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmColor.swift; sourceTree = "<group>"; };
 		DE6417D51FCA24670008ABAC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		DE6417DB1FCA24CB0008ABAC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		DE6417DF1FCA24D50008ABAC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -172,12 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				DE4831551FD0B923005EDFC5 /* Constants.swift */,
-				DE4831561FD0B923005EDFC5 /* NSAttributedString+Strikethrough.swift */,
 				DE4831571FD0B923005EDFC5 /* Shared.xcassets */,
 				DE4831581FD0B923005EDFC5 /* Models.swift */,
 				DE4831591FD0B923005EDFC5 /* LocalIPAddress.swift */,
 				DE48315A1FD0B923005EDFC5 /* SharedFunctionality.swift */,
-				DE48315B1FD0B923005EDFC5 /* RealmColor.swift */,
 			);
 			path = "RealmTasks Shared";
 			sourceTree = "<group>";
@@ -333,8 +327,6 @@
 				DE3DE7A21FCA1ABA00D0CA47 /* ViewController.swift in Sources */,
 				DE3DE7A01FCA1ABA00D0CA47 /* AppDelegate.swift in Sources */,
 				DE48315C1FD0B923005EDFC5 /* Constants.swift in Sources */,
-				DE4831621FD0B923005EDFC5 /* RealmColor.swift in Sources */,
-				DE48315D1FD0B923005EDFC5 /* NSAttributedString+Strikethrough.swift in Sources */,
 				DE4831611FD0B923005EDFC5 /* SharedFunctionality.swift in Sources */,
 				DE48315F1FD0B923005EDFC5 /* Models.swift in Sources */,
 				DE4831601FD0B923005EDFC5 /* LocalIPAddress.swift in Sources */,
