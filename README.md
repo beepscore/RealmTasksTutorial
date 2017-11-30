@@ -1,5 +1,5 @@
 # Purpose
-Do realm iOS tutorial
+Do realm iOS tutorial.
 
 # References
 
@@ -18,18 +18,37 @@ http://tackmobile.com/blog/App-Groups-and-iMessage-Extensions-for-iOS-10.html
 
 # Results
 
+## Appendix Prerequisite
+Use repo realm-tasks to create a realm database.
+
+### realm-tasks
+    git checkout master
+
+### start realm server
+    cd realm_practice
+    npm start
+
+### realm studio
+start realm studio
+
+### realm-tasks
+Start "RealmTasks Apple/RealmTasks.xcworkspace"
+In Xcode, build and run scheme RealmTasks macOS.
+Create user test pw test
+Now realm studio shows realm <uuid>/realmtasks
+fields
+id: string, text: string, date: date?, completed: bool
+Manually add some tasks.
 
 ## Appendix Record info about adding Realm framework for iOS to project.
 
-#### getting started
+### getting started
 https://realm.io/docs/swift/latest/
 
-#### realm-cocoa
+### realm-cocoa
 https://github.com/realm/realm-cocoa
 
-### Results
-
-#### Carthage
+### Carthage
 
     brew install carthage
 
