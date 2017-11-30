@@ -55,7 +55,7 @@ public func setDefaultRealmConfiguration(with user: SyncUser) {
         guard items.count > 1 && !realm.isInWriteTransaction else { return }
         let itemsReference = ThreadSafeReference(to: items)
         // Deduplicate
-        DispatchQueue(label: "io.realm.RealmTasks.bg").async {
+        DispatchQueue(label: "com.beepscore.RealmTasksTutorial.bg").async {
             let realm = try! Realm(configuration: realm.configuration)
             guard let items = realm.resolve(itemsReference), items.count > 1 else {
                 return
