@@ -65,12 +65,8 @@ class ViewController: UITableViewController {
     func setupRealm() {
         // Log in existing user with username and password
 
-        // realm object server running on local network e.g. macos
-        let realmServerUrlString = "http://127.0.0.1:9080"
-        let realmServerUrl = URL(string: realmServerUrlString)!
-
         SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false),
-                       server: realmServerUrl) { user, error in
+                       server: Constants.syncAuthURL) { user, error in
                         guard let user = user else {
                             fatalError(String(describing: error))
                         }
@@ -79,7 +75,7 @@ class ViewController: UITableViewController {
                 // Open Realm
                 let configuration = Realm.Configuration(
                     syncConfiguration: SyncConfiguration(user: user,
-                        realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
+                        realmURL: Constants.syncServerURL!)
                     )
                 self.realm = try! Realm(configuration: configuration)
 
