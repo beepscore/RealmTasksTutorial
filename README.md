@@ -24,7 +24,7 @@ Use repo realm-tasks to create a realm database.
 ### realm-tasks
     git checkout master
 
-### start realm server
+### start realm object server
     cd realm_practice
     npm start
 
