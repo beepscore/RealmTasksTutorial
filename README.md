@@ -17,8 +17,13 @@ https://academy.realm.io/posts/tutorial-sharing-data-between-watchkit-and-your-a
 http://tackmobile.com/blog/App-Groups-and-iMessage-Extensions-for-iOS-10.html
 
 # Results
+## Do prerequisites as described in tutorial and appendix.
 
-## Appendix Prerequisite
+## Run RealmTasksTutorial on iPhone
+log in using same credentials as in prerequisites.
+
+
+## Appendix Prerequisites
 Use repo realm-tasks to create a realm database.
 
 ### realm-tasks
@@ -34,7 +39,7 @@ start realm studio
 ### realm-tasks
 Start "RealmTasks Apple/RealmTasks.xcworkspace"
 In Xcode, build and run scheme RealmTasks macOS.
-Create user test pw test
+Create user e.g. username test pw test
 Now realm studio shows realm <uuid>/realmtasks
 fields
 id: string, text: string, date: date?, completed: bool
@@ -60,7 +65,7 @@ https://github.com/realm/realm-cocoa
 
     created Cartfile.resolved
 
-// TODO: ?
+### run schemes to build frameworks
 
     *** Building scheme "Realm" in Realm.xcworkspace
     *** Building scheme "RealmSwift" in Realm.xcworkspace
