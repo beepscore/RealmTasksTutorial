@@ -22,6 +22,11 @@ http://tackmobile.com/blog/App-Groups-and-iMessage-Extensions-for-iOS-10.html
 ## Run RealmTasksTutorial on iPhone
 log in using same credentials as in prerequisites.
 
+## inspect iOS simulator Documents/default.realm
+By default, realm writes file to Documents/default.realm
+On iOS simulator, path is similar to
+/Users/stevebaker/Library/Developer/CoreSimulator/Devices/45FBEDC8-1E44-4717-8E97-B33310AA2F51/data/Containers/Data/Application/1AEF8D68-6E59-4FC2-B7C7-5AD11624D204/Documents/default.realm
+You can manually copy this file and open it using Realm Studio / Open a local realm.
 
 ## Appendix Prerequisites
 Use repo realm-tasks to create a realm database.
