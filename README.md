@@ -9,6 +9,9 @@ https://realm.io/docs/tutorials/realmtasks/
 ## RealmSwiftExamples
 https://github.com/beepscore/RealmSwiftExamples.git
 
+## Introducing Realm: A Modern, Local Database Framework for Apps (/dev/world/2015)
+https://www.youtube.com/watch?v=doCOxzl8CFM
+
 ## RealmService
 Add a class similar to Realm: CRUD | Swift 4, Xcode 9
 https://www.youtube.com/watch?v=hC6dLLbfUXc
