@@ -22,11 +22,19 @@ http://tackmobile.com/blog/App-Groups-and-iMessage-Extensions-for-iOS-10.html
 ## Run RealmTasksTutorial on iPhone
 log in using same credentials as in prerequisites.
 
-## inspect iOS simulator Documents/default.realm
+## Realm Studio app
+### open a local realm
+Can view (and edit?) database records.
 By default, realm writes file to Documents/default.realm
 On iOS simulator, path is similar to
 /Users/stevebaker/Library/Developer/CoreSimulator/Devices/45FBEDC8-1E44-4717-8E97-B33310AA2F51/data/Containers/Data/Application/1AEF8D68-6E59-4FC2-B7C7-5AD11624D204/Documents/default.realm
 You can manually copy this file and open it using Realm Studio / Open a local realm.
+Presumably because you have a copy of the file, Realm Studio lets you view its records.
+### connect to realm object server
+Start realm object server. Start Realm Studio app and log in to server.
+You can see list of realms and users. I didn't see a way for an admin to view a user's data directly.
+This is good for privacy / security.
+To see data, log in to server using username and password.
 
 ## Appendix Prerequisites
 Use repo realm-tasks to create a realm database.
